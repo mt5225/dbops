@@ -116,4 +116,4 @@ GitHub.sublime-settings
 .history
 
 # MySQL data
-dbdata/
+dbdata/*
