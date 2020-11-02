@@ -80,6 +80,18 @@ DATABASES = {
         'OPTIONS': {
             'read_default_file': '/app/cnf/default.cnf',
         },
+    },
+    'db001': {
+        'ENGINE': 'django.db.backends.mysql',
+        'OPTIONS': {
+            'read_default_file': '/app/cnf/db001.cnf',
+        },
+    },
+    'db002': {
+        'ENGINE': 'django.db.backends.mysql',
+        'OPTIONS': {
+            'read_default_file': '/app/cnf/db002.cnf',
+        },
     }
 }
 

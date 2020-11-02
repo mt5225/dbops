@@ -1,0 +1,6 @@
+[client]
+host = db001
+database = mysql
+user = root
+password = root001
+default-character-set = utf8
