@@ -1,0 +1,22 @@
+<!-- templates/home.html -->
+
+{% extends '_base.html' %} 
+
+{% block title %}DB Ops{% endblock title %} 
+
+{% block content %}
+
+<h1>DB Ops</h1>
+
+<h2> == DB001 == </h2>
+{% for item in db001 %} 
+<p> {{ item }} </p> 
+{% endfor %}
+
+<h2> == DB002 == </h2>
+{% for item in db002 %} 
+<p> {{ item }} </p> 
+{% endfor %}
+
+{% endblock content %}
+
