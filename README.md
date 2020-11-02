@@ -1,3 +1,7 @@
+## create folder for db data
+
+`mkdir ./dbdata`
+
 ## startup
 
 - `docker-compose up -d`

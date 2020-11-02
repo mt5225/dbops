@@ -29,3 +29,22 @@ services:
     restart: always
     ports:
       - 8080:8080
+
+  # db instances as target
+  db001:
+    image: mysql:5.7
+    command: --init-file /data/init_001.sql
+    volumes:
+        - ./init/init_001.sql:/data/init_001.sql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root001
+  
+  db002:
+    image: mysql:5.7
+    command: --init-file /data/init_002.sql
+    volumes:
+        - ./init/init_002.sql:/data/init_002.sql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root002
