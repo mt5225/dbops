@@ -27,10 +27,9 @@ Running migrations:
 
 ## verify
 
-- open url `http://localhost:8080` and login as root/root, you should see the database name `dbops`, explore the tables
 - open url `http://localhost:8000` for init django page
 
-## browser target database 
+## exam or run sql on target databases 
 
 - open url `http://localhost:8080`
 
