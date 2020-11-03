@@ -35,11 +35,17 @@ Running migrations:
 - open url `http://localhost:8080`
 
 ### for db001
+
  - host: db001
  - username: root
  - password: root001
 
 ### for db002
+
  - host: db002
  - username: root
  - password: root002
+
+## debug
+
+`docker-compose logs -f web`
