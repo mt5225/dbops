@@ -5,6 +5,9 @@ import logging
 # This retrieves a Python logging instance (or creates it)
 logger = logging.getLogger(__name__)
 
+# List of target database
+target_dbs = ['db001', 'db002']
+
 
 def get_users(cursor):
     qstr = """ SELECT CONCAT('SHOW GRANTS FOR ''',user,'''@''',host,''';') FROM mysql.user """
@@ -20,14 +23,8 @@ def get_users(cursor):
     return users
 
 
-# Create your views here.
+# Create homepage views here.
 def homepage_view(request):
-    # Create your views here.
-    cursor1 = connections['db001'].cursor()
-    cursor2 = connections['db002'].cursor()
-    # Query Result
-    db_users = {
-        'db001': get_users(cursor1),
-        'db002': get_users(cursor2)
-    }
-    return render(request, "home.html", db_users)
+    db_users_dict = {db: get_users(
+        connections[db].cursor()) for db in target_dbs}
+    return render(request, "home.html", db_users_dict)
