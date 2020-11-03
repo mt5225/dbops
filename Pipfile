@@ -12,6 +12,8 @@ pylint = "*"
 mysqlclient = "*"
 random-username = "*"
 pandas = "*"
+install = "*"
+django-probes = "*"
 
 [requires]
 python_version = "3.8"
